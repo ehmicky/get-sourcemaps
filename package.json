@@ -45,7 +45,7 @@
     "js-base64": "^2.4.9"
   },
   "devDependencies": {
-    "@babel/cli": "^7.2.0",
+    "@babel/cli": "^7.2.3",
     "@babel/plugin-transform-runtime": "^7.2.0",
     "@babel/preset-env": "^7.2.0",
     "ava": "^1.0.1",
