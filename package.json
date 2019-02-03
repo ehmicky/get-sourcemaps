@@ -1,6 +1,6 @@
 {
-  "name": "@sourcemaps/get",
-  "version": "0.0.3",
+  "name": "get-sourcemaps",
+  "version": "0.0.1",
   "main": "index.js",
   "files": [
     "dist",
@@ -29,10 +29,10 @@
     "debugging"
   ],
   "license": "Apache-2.0",
-  "homepage": "https://git.io/fp7t6",
-  "repository": "sourcemaps/get",
+  "homepage": "https://git.io/fhSgK",
+  "repository": "ehmicky/get-sourcemaps",
   "bugs": {
-    "url": "https://github.com/sourcemaps/get/issues"
+    "url": "https://github.com/ehmicky/get-sourcemaps/issues"
   },
   "author": "ehmicky <ehmicky@gmail.com> (https://github.com/ehmicky)",
   "directories": {
