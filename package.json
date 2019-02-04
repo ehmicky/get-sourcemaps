@@ -42,7 +42,7 @@
   "dependencies": {
     "@babel/runtime": "^7.3.1",
     "core-js": "^2.6.3",
-    "js-base64": "^2.5.0"
+    "js-base64": "^2.5.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
