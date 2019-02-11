@@ -1,9 +1,21 @@
 {
-  "CHECK": ["{index,gulpfile}.js", "{src,gulp,test}/**/*.js", "*.md"],
+  "CHECK": ["{index,register,gulpfile.babel}.js", "{src,gulp,test}/**/*.js", "*.md"],
   "UNIT": ["index.js", "src", "gulp", "test"],
-  "TEST": ["{index,gulpfile,.babelrc}.js", "src", "gulp", "test", "*.md"],
-  "BUILD": ["{index,gulpfile,.babelrc}.js", "src"],
+  "TEST": [
+    "{index,register,gulpfile.babel,.babelrc}.js",
+    "src",
+    "gulp",
+    "test",
+    "*.md"
+  ],
+  "BUILD": ["{index,register,gulpfile.babel,.babelrc}.js", "src"],
   "BUILD_SRC": ["src"],
   "BUILD_DIST": ["dist"],
-  "DEV": ["{index,gulpfile,.babelrc}.js", "src", "gulp", "test", "*.md"]
+  "DEV": [
+    "{index,register,gulpfile.babel,.babelrc}.js",
+    "src",
+    "gulp",
+    "test",
+    "*.md"
+  ]
 }
