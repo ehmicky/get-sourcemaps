@@ -2,7 +2,7 @@
 
 const test = require('ava')
 
-const { parse, test: testComment } = require('../localpack')
+const { parse, test: testComment } = require('..')
 
 const { COMMENTS } = require('./helpers')
 
