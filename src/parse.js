@@ -3,7 +3,7 @@
 const assert = require('assert')
 // TODO: use global object once dropping support for Node.js <=9
 // eslint-disable-next-line no-shadow, node/prefer-global/url
-const { URL } = require('url')
+const { URL, parse: oldParse } = require('url')
 
 const {
   Base64: { decode: decodeBase64 },
@@ -47,10 +47,24 @@ const parseUrlComment = function({ url, multiline }) {
 }
 
 const validateUrl = function({ url }) {
+  if (URL === undefined) {
+    return validateUrlOld({ url })
+  }
+
   try {
     // eslint-disable-next-line no-new
     new URL(url, 'http://localhost')
   } catch (error) {
+    throw new Error(`Source map's URL '${url}' is invalid`)
+  }
+}
+
+// `URL` is not supported by Node.js 6
+// TODO: remove when support for Node.js 6 is dropped
+const validateUrlOld = function({ url }) {
+  const { pathname } = oldParse(url)
+
+  if (pathname === null) {
     throw new Error(`Source map's URL '${url}' is invalid`)
   }
 }
