@@ -1,6 +1,9 @@
 'use strict'
 
 const assert = require('assert')
+// TODO: use global object once dropping support for Node.js <=9
+// eslint-disable-next-line no-shadow, node/prefer-global/url
+const { URL } = require('url')
 
 const {
   Base64: { decode: decodeBase64 },
