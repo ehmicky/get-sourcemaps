@@ -2,7 +2,7 @@
 
 const assert = require('assert')
 // TODO: use global object once dropping support for Node.js <=9
-// eslint-disable-next-line no-shadow, node/prefer-global/url
+// eslint-disable-next-line no-shadow, node/prefer-global/url, node/no-deprecated-api
 const { URL, parse: oldParse } = require('url')
 
 const {
