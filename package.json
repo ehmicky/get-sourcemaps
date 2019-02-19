@@ -2,13 +2,9 @@
   "name": "get-sourcemaps",
   "version": "0.0.5",
   "main": "index.js",
-  "files": [
-    "dist",
-    "!*~"
-  ],
+  "files": ["dist", "!*~"],
   "scripts": {
-    "build": "gulp build",
-    "test": "npm run build && gulp test"
+    "test": "gulp test"
   },
   "husky": {
     "hooks": {
