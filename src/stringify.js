@@ -1,6 +1,5 @@
 'use strict'
 
-const assert = require('assert')
 const {
   Buffer: { isBuffer },
 } = require('buffer')
@@ -11,7 +10,9 @@ const stringifyContent = function({ fileContent }) {
     return fileContent.toString()
   }
 
-  assert(typeof fileContent === 'string', 'input must be a string')
+  if (typeof fileContent !== 'string') {
+    throw new TypeError('input must be a string')
+  }
 
   return fileContent
 }

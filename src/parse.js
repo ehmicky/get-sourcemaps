@@ -1,6 +1,5 @@
 'use strict'
 
-const assert = require('assert')
 // Node 8 & 9 do not have it as a global object
 // TODO: drop once dropping support for Node.js <=9
 // eslint-disable-next-line no-shadow, node/prefer-global/url
@@ -64,14 +63,15 @@ const parseDataUriComment = function({
   base64Content,
 }) {
   // Source map specification only allows JSON and UTF-8
-  assert(
-    [undefined, 'application/json', 'text/json'].includes(mime),
-    `Source map's MIME type must be 'application/json' not '${mime}'`,
-  )
-  assert(
-    [undefined, 'utf-8', 'utf8'].includes(charset),
-    `Source map's charset must be 'utf-8' not '${charset}'`,
-  )
+  if (![undefined, 'application/json', 'text/json'].includes(mime)) {
+    throw new Error(
+      `Source map's MIME type must be 'application/json' not '${mime}'`,
+    )
+  }
+
+  if (![undefined, 'utf-8', 'utf8'].includes(charset)) {
+    throw new Error(`Source map's charset must be 'utf-8' not '${charset}'`)
+  }
 
   // This never throws
   const content = decodeBase64(base64Content)
