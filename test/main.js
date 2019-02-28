@@ -6,7 +6,6 @@ const { parse, test: testComment } = require('..')
 
 const { COMMENTS } = require('./helpers')
 
-/* eslint-disable max-nested-callbacks */
 COMMENTS.forEach(comment => {
   test(`should test: ${comment}`, t => {
     try {
@@ -26,4 +25,3 @@ COMMENTS.forEach(comment => {
     }
   })
 })
-/* eslint-enable max-nested-callbacks */
