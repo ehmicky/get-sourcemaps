@@ -1,7 +1,7 @@
 {
   "name": "get-sourcemaps",
   "version": "0.0.5",
-  "main": "index.js",
+  "main": "dist/index.js",
   "files": [
     "dist",
     "!*~"
