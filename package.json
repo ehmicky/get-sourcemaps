@@ -3,8 +3,7 @@
   "version": "0.0.5",
   "main": "dist/index.js",
   "files": [
-    "dist",
-    "!*~"
+    "dist"
   ],
   "scripts": {
     "test": "gulp test"
