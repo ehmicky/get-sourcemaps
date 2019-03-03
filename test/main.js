@@ -2,7 +2,7 @@
 
 const test = require('ava')
 
-const { parse, test: testComment } = require('..')
+const { parse, test: testComment } = require('../src')
 
 const { COMMENTS } = require('./helpers')
 
