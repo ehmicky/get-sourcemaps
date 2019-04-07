@@ -1,6 +1,6 @@
 import { Buffer } from 'buffer'
 
-const COMMENTS = [
+export const COMMENTS = [
   // Valid
   '//# sourceMappingURL=file.js',
   '/* # sourceMappingURL=file.js */',
@@ -52,7 +52,3 @@ const COMMENTS = [
   '/* # sourceMappingURL=file*/.js */',
   '//# sourceMappingURL=file.js  .',
 ]
-
-module.exports = {
-  COMMENTS,
-}

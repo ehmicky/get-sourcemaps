@@ -17,7 +17,7 @@ import { stringifyContent } from './stringify.js'
 // comment style.
 // Returns `undefined` if none found.
 // Either return `undefined` or throw an error if source map comment is invalid.
-const parse = function(fileContent) {
+export const parse = function(fileContent) {
   const fileContentA = stringifyContent({ fileContent })
 
   const parts = COMMENT_REGEXP.exec(fileContentA)
@@ -85,8 +85,4 @@ const parseJson = function({ content }) {
     // Invalid Base64 is usually still parsed, then fails here
     throw new Error("Source map's data URI contains invalid JSON or base64")
   }
-}
-
-module.exports = {
-  parse,
 }

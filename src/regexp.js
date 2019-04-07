@@ -9,16 +9,11 @@
 //  - spaces around tokens
 //  - case insensitiveness
 // TODO: once platform support allows it, use RegExp named groups (?<name>)
-const COMMENT_REGEXP = /^\s*((?:\/\*)|(?:\/\/))\s*[#@]\s*sourceMappingURL\s*=\s*(?:(?:data:([^;]+)?(?:;charset=([^;]+))?;base64,([^\s*]+))|([^\s*]+))(?:\s*\*\/)?\s*$/imu
+export const COMMENT_REGEXP = /^\s*((?:\/\*)|(?:\/\/))\s*[#@]\s*sourceMappingURL\s*=\s*(?:(?:data:([^;]+)?(?:;charset=([^;]+))?;base64,([^\s*]+))|([^\s*]+))(?:\s*\*\/)?\s*$/imu
 
-const parseComment = function({
+export const parseComment = function({
   parts: [, commentSlashes, mime, charset, base64Content, url],
 }) {
   const multiline = commentSlashes === '/*'
   return { multiline, mime, charset, base64Content, url }
-}
-
-module.exports = {
-  COMMENT_REGEXP,
-  parseComment,
 }

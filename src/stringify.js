@@ -3,7 +3,7 @@ import {
 } from 'buffer'
 
 // Input is either string or buffer
-const stringifyContent = function({ fileContent }) {
+export const stringifyContent = function({ fileContent }) {
   if (isBuffer(fileContent)) {
     return fileContent.toString()
   }
@@ -13,8 +13,4 @@ const stringifyContent = function({ fileContent }) {
   }
 
   return fileContent
-}
-
-module.exports = {
-  stringifyContent,
 }
