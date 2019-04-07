@@ -1,8 +1,8 @@
-const test = require('ava')
+import test from 'ava'
 
-const { parse, test: testComment } = require('../src')
+import { parse, test: testComment } from '../src.js'
 
-const { COMMENTS } = require('./helpers')
+import { COMMENTS } from './helpers.js'
 
 COMMENTS.forEach(comment => {
   test(`should test: ${comment}`, t => {

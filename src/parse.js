@@ -1,14 +1,14 @@
 // Node 8 & 9 do not have it as a global object
 // TODO: drop once dropping support for Node.js <=9
 // eslint-disable-next-line no-shadow, node/prefer-global/url
-const { URL } = require('url')
+import { URL } from 'url'
 
-const {
+import {
   Base64: { decode: decodeBase64 },
-} = require('js-base64')
+} from 'js-base64'
 
-const { COMMENT_REGEXP, parseComment } = require('./regexp')
-const { stringifyContent } = require('./stringify')
+import { COMMENT_REGEXP, parseComment } from './regexp.js'
+import { stringifyContent } from './stringify.js'
 
 // Parse the source map comment from a file's content.
 // Returns `{ url, multiline }` if source map is another file (URL or path).

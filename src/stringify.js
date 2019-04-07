@@ -1,6 +1,6 @@
-const {
+import {
   Buffer: { isBuffer },
-} = require('buffer')
+} from 'buffer'
 
 // Input is either string or buffer
 const stringifyContent = function({ fileContent }) {

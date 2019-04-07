@@ -1,3 +1,3 @@
 module.exports = {
-  ...require('./fixtures'),
+  ...require('./fixtures.js'),
 }

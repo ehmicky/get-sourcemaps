@@ -1,4 +1,4 @@
 module.exports = {
-  ...require('./parse'),
-  ...require('./test'),
+  ...require('./parse.js'),
+  ...require('./test.js'),
 }

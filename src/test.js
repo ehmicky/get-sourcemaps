@@ -1,5 +1,5 @@
-const { COMMENT_REGEXP } = require('./regexp')
-const { stringifyContent } = require('./stringify')
+import { COMMENT_REGEXP } from './regexp.js'
+import { stringifyContent } from './stringify.js'
 
 // Check if a file's content contains a source map comment
 const test = function(fileContent) {
