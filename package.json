@@ -37,7 +37,7 @@
     "test": "test"
   },
   "dependencies": {
-    "core-js": "^3.0.0",
+    "core-js": "^3.0.1",
     "js-base64": "^2.5.1"
   },
   "devDependencies": {
