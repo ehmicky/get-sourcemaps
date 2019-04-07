@@ -1,5 +1,3 @@
-'use strict'
-
 // RegExp for `sourceMappingURL`, i.e. the comment inserted in source files to
 // declare either the URI of their source maps. The URI can be a data URI.
 // Matches either:

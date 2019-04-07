@@ -1,5 +1,3 @@
-'use strict'
-
 const { COMMENT_REGEXP } = require('./regexp')
 const { stringifyContent } = require('./stringify')
 

@@ -1,5 +1,3 @@
-'use strict'
-
 const test = require('ava')
 
 const { parse, test: testComment } = require('../src')
