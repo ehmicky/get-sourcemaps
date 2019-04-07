@@ -1,6 +1,6 @@
-import {
-  Buffer: { isBuffer },
-} from 'buffer'
+import { Buffer } from 'buffer'
+
+const { isBuffer } = Buffer
 
 // Input is either string or buffer
 export const stringifyContent = function({ fileContent }) {

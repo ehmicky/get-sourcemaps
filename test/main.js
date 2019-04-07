@@ -1,8 +1,8 @@
 import test from 'ava'
 
-import { parse, test: testComment } from '../src.js'
+import { parse, test as testComment } from '../src/main.js'
 
-import { COMMENTS } from './helpers.js'
+import { COMMENTS } from './helpers/fixtures.js'
 
 COMMENTS.forEach(comment => {
   test(`should test: ${comment}`, t => {

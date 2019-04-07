@@ -3,12 +3,12 @@
 // eslint-disable-next-line no-shadow, node/prefer-global/url
 import { URL } from 'url'
 
-import {
-  Base64: { decode: decodeBase64 },
-} from 'js-base64'
+import { Base64 } from 'js-base64'
 
 import { COMMENT_REGEXP, parseComment } from './regexp.js'
 import { stringifyContent } from './stringify.js'
+
+const { decode: decodeBase64 } = Base64
 
 // Parse the source map comment from a file's content.
 // Returns `{ url, multiline }` if source map is another file (URL or path).

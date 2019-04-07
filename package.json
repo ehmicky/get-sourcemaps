@@ -1,7 +1,7 @@
 {
   "name": "get-sourcemaps",
   "version": "0.1.0",
-  "main": "build/src/index.js",
+  "main": "build/src/main.js",
   "files": [
     "build/src",
     "!~"
