@@ -1,6 +1,3 @@
-// Node 8 & 9 do not have it as a global object
-// TODO: drop once dropping support for Node.js <=9
-// eslint-disable-next-line no-shadow, node/prefer-global/url
 import { URL } from 'url'
 
 import { Base64 } from 'js-base64'
