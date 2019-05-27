@@ -3,7 +3,12 @@ import { Buffer } from 'buffer'
 import test from 'ava'
 import testEach from 'test-each'
 
-import { parse, test as testComment } from '../src/main.js'
+import { test as testComment, parse } from '../src/main.js'
+
+import { stringifyErrors } from './helpers/error.js'
+
+const eParse = stringifyErrors(parse)
+const eTest = stringifyErrors(testComment)
 
 testEach(
   [
@@ -60,21 +65,11 @@ testEach(
   ],
   ({ title }, comment) => {
     test(`should test | ${title}`, t => {
-      try {
-        const value = testComment(comment)
-        t.snapshot(value)
-      } catch (error) {
-        t.snapshot(error.message)
-      }
+      t.snapshot(eTest(comment))
     })
 
     test(`should parse | ${title}`, t => {
-      try {
-        const value = parse(comment)
-        t.snapshot(value)
-      } catch (error) {
-        t.snapshot(error.message)
-      }
+      t.snapshot(eParse(comment))
     })
   },
 )
