@@ -64,11 +64,11 @@ testEach(
     '//# sourceMappingURL=file.js  .',
   ],
   ({ title }, comment) => {
-    test(`should test | ${title}`, t => {
+    test(`test() | ${title}`, t => {
       t.snapshot(eTest(comment))
     })
 
-    test(`should parse | ${title}`, t => {
+    test(`parse() | ${title}`, t => {
       t.snapshot(eParse(comment))
     })
   },
