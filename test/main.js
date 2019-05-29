@@ -5,11 +5,6 @@ import testEach from 'test-each'
 
 import { test as testComment, parse } from '../src/main.js'
 
-import { stringifyErrors } from './helpers/error.js'
-
-const eParse = stringifyErrors(parse)
-const eTest = stringifyErrors(testComment)
-
 testEach(
   [
     // Valid
@@ -65,11 +60,19 @@ testEach(
   ],
   ({ title }, comment) => {
     test(`test() | ${title}`, t => {
-      t.snapshot(eTest(comment))
+      try {
+        t.snapshot(testComment(comment))
+      } catch (error) {
+        t.snapshot(error)
+      }
     })
 
     test(`parse() | ${title}`, t => {
-      t.snapshot(eParse(comment))
+      try {
+        t.snapshot(parse(comment))
+      } catch (error) {
+        t.snapshot(error)
+      }
     })
   },
 )
