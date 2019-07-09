@@ -1,11 +1,11 @@
 import { Buffer } from 'buffer'
 
 import test from 'ava'
-import testEach from 'test-each'
+import { each } from 'test-each'
 
 import { test as testComment, parse } from '../src/main.js'
 
-testEach(
+each(
   [
     // Valid
     '//# sourceMappingURL=file.js',
