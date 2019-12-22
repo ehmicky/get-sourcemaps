@@ -22,9 +22,7 @@ export const parse = function(fileContent) {
     return
   }
 
-  const { multiline, mime, charset, base64Content, url } = parseComment({
-    parts,
-  })
+  const { multiline, mime, charset, base64Content, url } = parseComment(parts)
 
   if (url !== undefined) {
     return parseUrlComment({ url, multiline })
