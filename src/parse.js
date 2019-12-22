@@ -1,5 +1,3 @@
-import { URL } from 'url'
-
 import { Base64 } from 'js-base64'
 
 import { COMMENT_REGEXP, parseComment } from './regexp.js'
