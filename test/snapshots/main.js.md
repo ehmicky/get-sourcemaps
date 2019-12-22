@@ -543,3 +543,78 @@ After"
 > Snapshot 1
 
     true
+
+## parse() | "//# sourceMappingURL=file.js\n//# sourceMappingURL=two.js"
+
+> Snapshot 1
+
+    {
+      multiline: false,
+      url: 'file.js',
+    }
+
+## parse() | "//# sourceMappingURL=file.js\nAfter"
+
+> Snapshot 1
+
+    {
+      multiline: false,
+      url: 'file.js',
+    }
+
+## parse() | "//# sourceMappingURL=file.js\r\nAfter"
+
+> Snapshot 1
+
+    {
+      multiline: false,
+      url: 'file.js',
+    }
+
+## parse() | "Before\n//# sourceMappingURL=file.js"
+
+> Snapshot 1
+
+    {
+      multiline: false,
+      url: 'file.js',
+    }
+
+## parse() | "Before\r\n//# sourceMappingURL=file.js"
+
+> Snapshot 1
+
+    {
+      multiline: false,
+      url: 'file.js',
+    }
+
+## test() | "//# sourceMappingURL=file.js\n//# sourceMappingURL=two.js"
+
+> Snapshot 1
+
+    true
+
+## test() | "//# sourceMappingURL=file.js\nAfter"
+
+> Snapshot 1
+
+    true
+
+## test() | "//# sourceMappingURL=file.js\r\nAfter"
+
+> Snapshot 1
+
+    true
+
+## test() | "Before\n//# sourceMappingURL=file.js"
+
+> Snapshot 1
+
+    true
+
+## test() | "Before\r\n//# sourceMappingURL=file.js"
+
+> Snapshot 1
+
+    true
