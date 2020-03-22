@@ -54,13 +54,13 @@ const parseDataUriComment = function ({
   base64Content,
 }) {
   // Source map specification only allows JSON and UTF-8
-  if (![undefined, 'application/json', 'text/json'].includes(mime)) {
+  if (!JSON_MIME_TYPES.has(mime)) {
     throw new Error(
       `Source map's MIME type must be 'application/json' not '${mime}'`,
     )
   }
 
-  if (![undefined, 'utf-8', 'utf8'].includes(charset)) {
+  if (!UTF8_CHARSETS.has(charset)) {
     throw new Error(`Source map's charset must be 'utf-8' not '${charset}'`)
   }
 
@@ -70,6 +70,9 @@ const parseDataUriComment = function ({
   const sourcemap = parseJson({ content })
   return { sourcemap, multiline }
 }
+
+const JSON_MIME_TYPES = new Set([undefined, 'application/json', 'text/json'])
+const UTF8_CHARSETS = new Set([undefined, 'utf-8', 'utf8'])
 
 const parseJson = function ({ content }) {
   try {
