@@ -12,7 +12,7 @@ const { decode: decodeBase64 } = Base64
 // comment style.
 // Returns `undefined` if none found.
 // Either return `undefined` or throw an error if source map comment is invalid.
-export const parse = function(fileContent) {
+export const parse = function (fileContent) {
   const fileContentA = stringifyContent({ fileContent })
 
   const parts = COMMENT_REGEXP.exec(fileContentA)
@@ -32,12 +32,12 @@ export const parse = function(fileContent) {
 }
 
 // When the source map comment uses an external URI
-const parseUrlComment = function({ url, multiline }) {
+const parseUrlComment = function ({ url, multiline }) {
   validateUrl({ url })
   return { url, multiline }
 }
 
-const validateUrl = function({ url }) {
+const validateUrl = function ({ url }) {
   try {
     // eslint-disable-next-line no-new
     new URL(url, 'http://localhost')
@@ -47,7 +47,7 @@ const validateUrl = function({ url }) {
 }
 
 // When the source map comment uses a data URI
-const parseDataUriComment = function({
+const parseDataUriComment = function ({
   multiline,
   mime,
   charset,
@@ -71,7 +71,7 @@ const parseDataUriComment = function({
   return { sourcemap, multiline }
 }
 
-const parseJson = function({ content }) {
+const parseJson = function ({ content }) {
   try {
     return JSON.parse(content)
   } catch (error) {

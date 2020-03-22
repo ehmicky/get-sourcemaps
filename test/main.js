@@ -59,7 +59,7 @@ each(
     '//# sourceMappingURL=file.js  .',
   ],
   ({ title }, comment) => {
-    test(`test() | ${title}`, t => {
+    test(`test() | ${title}`, (t) => {
       try {
         t.snapshot(testComment(comment))
       } catch (error) {
@@ -67,7 +67,7 @@ each(
       }
     })
 
-    test(`parse() | ${title}`, t => {
+    test(`parse() | ${title}`, (t) => {
       try {
         t.snapshot(parse(comment))
       } catch (error) {
