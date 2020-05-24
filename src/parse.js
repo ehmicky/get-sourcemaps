@@ -41,7 +41,7 @@ const validateUrl = function ({ url }) {
   try {
     // eslint-disable-next-line no-new
     new URL(url, 'http://localhost')
-  } catch (error) {
+  } catch {
     throw new Error(`Source map's URL '${url}' is invalid`)
   }
 }
@@ -77,7 +77,7 @@ const UTF8_CHARSETS = new Set([undefined, 'utf-8', 'utf8'])
 const parseJson = function ({ content }) {
   try {
     return JSON.parse(content)
-  } catch (error) {
+  } catch {
     // Invalid Base64 is usually still parsed, then fails here
     throw new Error("Source map's data URI contains invalid JSON or base64")
   }
