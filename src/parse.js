@@ -64,21 +64,13 @@ const parseDataUriComment = function ({
     throw new Error(`Source map's charset must be 'utf-8' not '${charset}'`)
   }
 
-  const content = parseBase64(base64Content)
+  const content = decodeBase64(base64Content)
   const sourcemap = parseJson({ content })
   return { sourcemap, multiline }
 }
 
 const JSON_MIME_TYPES = new Set([undefined, 'application/json', 'text/json'])
 const UTF8_CHARSETS = new Set([undefined, 'utf-8', 'utf8'])
-
-const parseBase64 = function (base64Content) {
-  try {
-    return decodeBase64(base64Content)
-  } catch {
-    throw new Error("Source map's data URI contains invalid base64")
-  }
-}
 
 const parseJson = function ({ content }) {
   try {
