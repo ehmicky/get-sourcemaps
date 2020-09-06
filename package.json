@@ -40,7 +40,7 @@
     "js-base64": "^3.4.5"
   },
   "devDependencies": {
-    "@ehmicky/dev-tasks": "^0.31.65",
+    "@ehmicky/dev-tasks": "^0.31.66",
     "ava": "^3.12.1",
     "gulp": "^4.0.2",
     "husky": "^4.3.0",
