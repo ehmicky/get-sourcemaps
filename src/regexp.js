@@ -8,7 +8,8 @@
 //  - deprecated syntax //@ instead of //#
 //  - spaces around tokens
 //  - case insensitiveness
-export const COMMENT_REGEXP = /^\s*(?<commentSlashes>(\/\*)|(\/\/))\s*[#@]\s*sourceMappingURL\s*=\s*((data:(?<mime>[^;]+)?(;charset=(?<charset>[^;]+))?;base64,(?<base64Content>[^\s*]+))|(?<url>[^\s*]+))(\s*\*\/)?\s*$/imu
+export const COMMENT_REGEXP =
+  /^\s*(?<commentSlashes>(\/\*)|(\/\/))\s*[#@]\s*sourceMappingURL\s*=\s*((data:(?<mime>[^;]+)?(;charset=(?<charset>[^;]+))?;base64,(?<base64Content>[^\s*]+))|(?<url>[^\s*]+))(\s*\*\/)?\s*$/imu
 
 export const parseComment = function ({
   groups: { commentSlashes, mime, charset, base64Content, url },
