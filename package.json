@@ -41,7 +41,7 @@
     "js-base64": "^3.6.0"
   },
   "devDependencies": {
-    "@ehmicky/dev-tasks": "^1.0.7",
+    "@ehmicky/dev-tasks": "^1.0.8",
     "test-each": "^2.0.1"
   },
   "engines": {
