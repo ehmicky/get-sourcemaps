@@ -5,9 +5,3 @@
 [![Medium](https://img.shields.io/badge/%E2%80%8B-medium-4cc61e.svg?logo=medium)](https://medium.com/@ehmicky)
 
 Work in progress!
-
-# Installation
-
-```bash
-$ npm install get-sourcemaps
-```
