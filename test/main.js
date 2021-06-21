@@ -1,7 +1,6 @@
 import { Buffer } from 'buffer'
 
 import test from 'ava'
-// eslint-disable-next-line import/no-unresolved, node/no-missing-import
 import { test as testComment, parse } from 'get-sourcemaps'
 import { each } from 'test-each'
 
