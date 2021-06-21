@@ -10,11 +10,6 @@
   "scripts": {
     "test": "gulp test"
   },
-  "husky": {
-    "hooks": {
-      "pre-push": "gulp -LL check --full"
-    }
-  },
   "description": "Parse and serialize sourceMappingURL comments",
   "keywords": [
     "source-maps",
